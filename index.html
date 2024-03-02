@@ -3,12 +3,49 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="style.css" />
         <title>Library</title>
     </head>
     <body>
         <h1>My Library</h1>
-
-        <div class="card-container"></div>
+        <button class="book-btn">Add Book</button>
+        <div class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <form action="POST">
+                    <label for="title">Book Title</label>
+                    <input type="text" id="title" name="title" />
+                    <label for="author">Author</label>
+                    <input type="text" id="author" name="author" />
+                    <label for="pages">Pages</label>
+                    <input type="number" id="pages" name="pages" />
+                    <label for="read">Have you read this one?</label>
+                    <input type="radio" id="yes" name="yes" value="Yes" />
+                    <label for="yes">Yes</label>
+                    <input type="radio" id="no" name="no" value="No" />
+                    <label for="no">No</label>
+                    <input
+                        type="button"
+                        id="button"
+                        name="button"
+                        value="Done!"
+                    />
+                </form>
+            </div>
+        </div>
+        <div class="card-container">
+            <div class="card">
+                <ul>
+                    <li class="title">Last Chance to See</li>
+                    <li class="author">Douglas Adams</li>
+                    <li class="pages">Pages: 218</li>
+                    <li class="read"><button class="readBtn">Read</button></li>
+                    <li class="delete">
+                        <button class="delBtn">Delete</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
 
         <script src="script.js"></script>
     </body>
