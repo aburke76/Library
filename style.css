@@ -11,6 +11,10 @@
 .card {
     border: 2px solid black;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px;
 }
 
 ul {

@@ -8,28 +8,23 @@
     </head>
     <body>
         <h1>My Library</h1>
-        <button class="book-btn">Add Book</button>
+        <button class="book-btn">
+            <span class="add">&plus;</span>Add Book
+        </button>
         <div class="modal">
             <div class="modal-content">
                 <span class="close">&times;</span>
-                <form action="POST">
-                    <label for="title">Book Title</label>
+                <form onsubmit="reset()" action="POST">
+                    <label for="title" class="book-title">Book Title</label>
                     <input type="text" id="title" name="title" />
-                    <label for="author">Author</label>
+                    <label for="author" class="book-author">Author</label>
                     <input type="text" id="author" name="author" />
-                    <label for="pages">Pages</label>
+                    <label for="pages" class="book-pages">Pages</label>
                     <input type="number" id="pages" name="pages" />
-                    <label for="read">Have you read this one?</label>
-                    <input type="radio" id="yes" name="yes" value="Yes" />
-                    <label for="yes">Yes</label>
-                    <input type="radio" id="no" name="no" value="No" />
-                    <label for="no">No</label>
-                    <input
-                        type="button"
-                        id="button"
-                        name="button"
-                        value="Done!"
-                    />
+                    <label>Have you read this book?</label>
+                    <input type="checkbox" name="read" id="read" />
+                    <label for="read">Yes</label>
+                    <input id="submit-btn" type="button" value="Done!" />
                 </form>
             </div>
         </div>
