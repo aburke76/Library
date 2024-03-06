@@ -2,6 +2,10 @@
     box-sizing: border-box;
 }
 
+.book-btn {
+    margin-bottom: 21.4px;
+}
+
 .card-container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));

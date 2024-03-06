@@ -14,7 +14,7 @@
         <div class="modal">
             <div class="modal-content">
                 <span class="close">&times;</span>
-                <form onsubmit="reset()" action="POST">
+                <form class="form" action="POST">
                     <label for="title" class="book-title">Book Title</label>
                     <input type="text" id="title" name="title" />
                     <label for="author" class="book-author">Author</label>
@@ -28,19 +28,7 @@
                 </form>
             </div>
         </div>
-        <div class="card-container">
-            <div class="card">
-                <ul>
-                    <li class="title">Last Chance to See</li>
-                    <li class="author">Douglas Adams</li>
-                    <li class="pages">Pages: 218</li>
-                    <li class="read"><button class="readBtn">Read</button></li>
-                    <li class="delete">
-                        <button class="delBtn">Delete</button>
-                    </li>
-                </ul>
-            </div>
-        </div>
+        <div class="card-container"></div>
 
         <script src="script.js"></script>
     </body>
