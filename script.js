@@ -28,7 +28,7 @@ window.onclick = function (event) {
     }
 };
 
-submitBtn.addEventListener("click", (event) => {
+form.addEventListener("submit", (event) => {
     let title = bookTitle.value;
     let author = bookAuthor.value;
     let pages = bookPages.value;
@@ -36,7 +36,6 @@ submitBtn.addEventListener("click", (event) => {
         let read = "Read";
         const newBook = new Book(title, author, pages, read);
         myLibrary.push(newBook);
-        event.preventDefault();
         modal.style.display = "none";
         addBookToLibrary(newBook);
     }
@@ -44,13 +43,11 @@ submitBtn.addEventListener("click", (event) => {
         let read = "Not Read";
         const newBook = new Book(title, author, pages, read);
         myLibrary.push(newBook);
-        event.preventDefault();
         modal.style.display = "none";
         addBookToLibrary(newBook);
     }
+    event.preventDefault();
     form.reset();
-
-    console.log(myLibrary);
 });
 
 function Book(title, author, pages, read) {

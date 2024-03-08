@@ -189,11 +189,11 @@ input[type="submit"]:active {
 .delBtn {
     background-color: #d62828;
     color: #eae2b7;
-    font-size: 18px;
+    font-size: 16px;
 }
 
 .readBtn {
-    font-size: 18px;
+    font-size: 20px;
 }
 
 .read-active,
