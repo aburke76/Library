@@ -3,7 +3,7 @@ const modal = document.querySelector(".modal");
 const form = document.querySelector(".form");
 const addBookBtn = document.querySelector(".book-btn");
 const closeBtn = document.querySelector(".close");
-const submitBtn = document.querySelector("#submit-btn");
+const submitBtn = document.querySelector("#submit");
 const bookTitle = document.querySelector("#title");
 const bookAuthor = document.querySelector("#author");
 const bookPages = document.querySelector("#pages");
@@ -101,13 +101,22 @@ function addBookToLibrary(book) {
             }
         }
     });
+    if (book.read === "Read") {
+        readBtn.classList.add("read-active");
+    } else {
+        readBtn.classList.add("not-read-active");
+    }
     readBtn.addEventListener("click", () => {
         if (book.read === "Read") {
             book.read = "Not Read";
             readBtn.textContent = "Not Read";
+            readBtn.classList.remove("read-active");
+            readBtn.classList.add("not-read-active");
         } else {
             book.read = "Read";
             readBtn.textContent = "Read";
+            readBtn.classList.remove("not-read-active");
+            readBtn.classList.add("read-active");
         }
     });
 }
